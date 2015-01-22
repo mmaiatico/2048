@@ -26,7 +26,9 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     if (metadata.terminated) {
       if (metadata.over) {
-        self.message(false); // You lose
+        window.setTimeout(function(){
+          self.message(false); // You lose  
+        }, 2000)
       } else if (metadata.won) {
         self.message(true); // You win!
       }
